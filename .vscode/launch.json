@@ -1,23 +1,30 @@
 {
-  "version": "0.2.0",
+  "version": "0.1.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "name": "Python: Current File",
+      "type": "python",
       "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "//wsl$/Ubuntu-22.04/home/fredvaz/mastering_python",
-      "program": "//wsl$/Ubuntu-22.04/home/fredvaz/mastering_python/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Debugging with pdb",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}/debug",
+      "args": ["example_app.main:app"]
+    },
+    {
+      "name": "Python: Debugging with uvicorn",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}/debug",
+      "args": [
+        "example_app.main:app"
       ]
     }
   ]
