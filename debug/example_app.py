@@ -16,6 +16,7 @@ def add(num1, num2):
     # print(num1, num2) # hard debugging
     # instead we can use the pdb: gives a interactive python debugger
     # that we can now type commands e.g., type num1, num2, step, help, exit
+    print("Hello World!\n")
     pdb.set_trace() 
     t = 4 * 5
     return num1 + num2
